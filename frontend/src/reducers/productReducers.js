@@ -6,6 +6,8 @@ import {
 
 const INITIAL_STATE = {
   products: [],
+  loading: null,
+  error: null,
 }
 
 export const productListReducer = (state = INITIAL_STATE, action) => {
