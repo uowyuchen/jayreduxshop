@@ -12,7 +12,7 @@ const ProductScreen = ({ match, history }) => {
   const { product, loading, error } = useSelector(
     (state) => state.productDetails
   )
-  const [qty, setQty] = useState()
+  const [qty, setQty] = useState(1)
 
   useEffect(() => {
     dispatch(listProductDetails(match.params.id))
@@ -20,7 +20,7 @@ const ProductScreen = ({ match, history }) => {
 
   // select the amount of product to be purchased
   const handleSelect = (e) => {
-    console.log(setQty(e.target.value))
+    setQty(e.target.value)
   }
 
   // add to cart button
